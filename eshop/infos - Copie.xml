@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <bd>
+        <db>shopdb</db>
+        <port>3306</port>
+        <user>root</user>
+        <pass></pass>
+        <url>localhost</url>
+    </bd>
+    <admin>
+        <user>root</user>
+        <pass>toor</pass>
+    </admin>
+    <server>
+        <url>localhost/eshop</url>
+    </server>
+</config>

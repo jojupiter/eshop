@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08-Mar-2018, 11:38:24
+    Author     : Nivekiba
+*/
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.table-view .column-header {
+    -fx-background-color: black;
+}
+
+.table-view .table-cell {
+    -fx-alignment: CENTER;
+}
+
+.pagination .pagination-control .control-box{
+    -fx-spacing: 4;
+}
+
+.pagination .pagination-control .control-box .left-arrow-button, .right-arrow-button{
+    -fx-background-color: transparent, transparent;
+    -fx-scale-x: 2.5;
+    -fx-scale-y: 2.5;
+    -fx-padding: 0 5 0 5;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+.pagination .pagination-control .number-button{
+    -fx-background-color: whitesmoke;
+    -fx-border-color: black;
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+    -fx-text-fill: black;
+    -fx-border-width: 1;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+.pagination .pagination-control .number-button:selected{
+    -fx-background-color: black;
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-color: black;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eshop.ProdEditDialogController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="28.0" prefHeight="288.0" prefWidth="318.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.66668701171875" minWidth="10.0" prefWidth="139.66668701171875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.66668701171875" minWidth="10.0" prefWidth="167.33331298828125" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="131.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="131.0" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="97.0" text="      CODE" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="97.0" text="       NOM" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#98a0a8" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="174.0" GridPane.columnIndex="1" />
+            <Label fx:id="codePro" text="#IID" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomPro" prefHeight="42.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="137.0" GridPane.rowIndex="3" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="132.0" GridPane.rowIndex="4" />
+            <Label prefHeight="27.0" prefWidth="128.0" text=" PRIX DE VENTE" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="122.0" text="    QUANTITE" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prix_vente" prefHeight="42.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="qte" prefHeight="42.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="131.0" GridPane.rowIndex="2" />
+            <Label prefHeight="27.0" prefWidth="128.0" text="  PRIX D'ACHAT" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prix" prefHeight="42.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <JFXButton id="okClicked" layoutX="121.0" layoutY="352.0" onAction="#handleOk" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #111155;" text="Valider" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton cancelButton="true" layoutX="324.0" layoutY="352.0" onAction="#handleCancel" prefHeight="39.0" prefWidth="165.0" style="-fx-background-color: #333333;" text="Annuler" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <GridPane layoutX="340.0" layoutY="28.0" prefHeight="288.0" prefWidth="326.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.66668701171875" minWidth="10.0" prefWidth="139.66668701171875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.66668701171875" minWidth="10.0" prefWidth="167.33331298828125" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="131.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="131.0" GridPane.rowIndex="1" />
+            <Label fx:id="idCat1" text="#IID" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idFour" prefHeight="42.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="131.0" GridPane.rowIndex="2" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c1f22" height="46.0" stroke="BLACK" strokeType="INSIDE" style="-fx-color: #123456;" width="132.0" GridPane.rowIndex="3" />
+            <Label prefHeight="17.0" prefWidth="97.0" text="       ACTIF" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="122.0" text="    CATEGORIE" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="catCombo" prefHeight="41.0" prefWidth="177.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="27.0" prefWidth="128.0" text="  FOURNISSEUR" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="122.0" text="  DESCRIPTION" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="description" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <JFXCheckBox fx:id="actif" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

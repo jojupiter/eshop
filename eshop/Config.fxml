@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="816.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="eshop.ConfigController">
+   <children>
+      <Pane layoutX="41.0" layoutY="64.0" prefHeight="316.0" prefWidth="354.0" style="-fx-border-color: black; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="18.0" layoutY="-11.0" style="-fx-background-color: white;" text=" Base de Donnees " />
+            <GridPane layoutX="15.0" layoutY="1.0" prefHeight="235.0" prefWidth="319.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Adresse:" GridPane.rowIndex="1" />
+                  <Label style="-fx-font-weight: bold;" text="Nom utilisateur:" GridPane.rowIndex="3" />
+                  <Label style="-fx-font-weight: bold;" text="Mot de passe:" GridPane.rowIndex="4" />
+                  <JFXTextField fx:id="adresse_bd" promptText="http://1.2.3.4" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="user_bd" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="pass_bd" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label style="-fx-font-weight: bold;" text="Nom BD:" GridPane.rowIndex="5" />
+                  <JFXTextField fx:id="name_bd" promptText="eshop_db" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label style="-fx-font-weight: bold;" text="Port:" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="port_bd" promptText="0000" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <JFXButton fx:id="testBtn" layoutX="117.0" layoutY="271.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Test connexion" textFill="WHITE" />
+            <Label fx:id="connexMsg" layoutX="14.0" layoutY="248.0" style="-fx-font-weight: bold;" text="message" />
+         </children>
+      </Pane>
+      <Pane layoutX="426.0" layoutY="72.0" prefHeight="138.0" prefWidth="354.0" style="-fx-border-color: black; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="18.0" layoutY="-11.0" style="-fx-background-color: white;" text=" Administrateur " />
+            <GridPane layoutX="15.0" layoutY="1.0" prefHeight="110.0" prefWidth="319.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Nom utilisateur:" GridPane.rowIndex="1" />
+                  <Label style="-fx-font-weight: bold;" text="Mot de passe:" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="user_admin" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="pass_admin" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane layoutX="426.0" layoutY="253.0" prefHeight="96.0" prefWidth="354.0" style="-fx-border-color: black; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="18.0" layoutY="-11.0" style="-fx-background-color: white;" text=" Serveur " />
+            <GridPane layoutX="15.0" layoutY="1.0" prefHeight="64.0" prefWidth="319.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="105.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="214.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Adresse:" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="adresse_serveur" promptText="www.eshop.com" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <JFXButton fx:id="saveBtn" layoutX="272.0" layoutY="404.0" onAction="#handleSaveConfig" ripplerFill="WHITE" style="-fx-background-color: black;" text="Sauvegarder" textFill="WHITE" />
+      <JFXButton fx:id="closeBtn" layoutX="426.0" layoutY="404.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Annuler" textFill="WHITE" />
+   </children>
+</AnchorPane>

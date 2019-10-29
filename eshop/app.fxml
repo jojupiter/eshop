@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="936.0" prefWidth="1331.0" style="-fx-background-color: white; -fx-border-width: 2px; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eshop.appController">
+   <children>
+      <AnchorPane layoutX="286.0" layoutY="517.0" opacity="0.9" prefHeight="30.0" prefWidth="1323.0" style="-fx-background-color: #1d2026;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane fx:id="menuPane" layoutX="241.0" layoutY="10.0" opacity="0.9" prefHeight="114.0" prefWidth="1323.0" style="-fx-background-color: #1d2026;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="catBtn" layoutX="14.0" layoutY="67.0" onAction="#handleMenuClick" prefHeight="46.0" prefWidth="130.0" ripplerFill="WHITE" style="-fx-background-color: black; -fx-font-weight: bold;" text="Categories" textFill="WHITE" AnchorPane.bottomAnchor="1.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="prodBtn" layoutX="160.0" layoutY="67.0" onAction="#handleMenuClick" prefHeight="46.0" prefWidth="120.0" ripplerFill="WHITE" style="-fx-background-color: black; -fx-font-weight: bold;" text="Produits" textFill="WHITE" AnchorPane.bottomAnchor="1.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="stockBtn" layoutX="298.0" layoutY="65.0" onAction="#handleMenuClick" prefHeight="46.0" prefWidth="85.0" ripplerFill="WHITE" style="-fx-background-color: black; -fx-font-weight: bold;" text="Stock" textFill="WHITE" AnchorPane.bottomAnchor="3.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="cmdBtn" layoutX="395.0" layoutY="67.0" onAction="#handleMenuClick" prefHeight="46.0" prefWidth="144.0" ripplerFill="WHITE" style="-fx-background-color: black; -fx-font-weight: bold;" text="Commandes" textFill="WHITE" AnchorPane.bottomAnchor="1.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="527.0" layoutY="14.0" text="GESTION D'UN MAGASIN" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="1000.0" layoutY="67.0" text="Connecté en tant que: " textFill="WHITE" AnchorPane.rightAnchor="176.0" />
+            <Label fx:id="connected" layoutX="1150.0" layoutY="67.0" text="Mvondo Mvondo Ulrich" textFill="#66ff3c" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="usersBtn" layoutX="554.0" layoutY="67.0" onAction="#handleMenuClick" prefHeight="46.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: black; -fx-font-weight: bold;" text="Gestionnaires" textFill="WHITE" AnchorPane.bottomAnchor="1.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="configBtn" layoutX="1169.0" layoutY="25.0" onAction="#handleConfigClick" prefHeight="21.0" prefWidth="144.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Configuration" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="compBtn" layoutX="737.0" layoutY="67.0" onAction="#handleMenuClick" prefHeight="46.0" prefWidth="151.0" ripplerFill="WHITE" style="-fx-background-color: black; -fx-font-weight: bold;" text="Comptabilité" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1004.0" layoutY="25.0" onAction="#handleExit" prefHeight="21.0" prefWidth="144.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Deconnexion" textFill="WHITE" AnchorPane.rightAnchor="184.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="categoriePane" layoutX="417.0" layoutY="238.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <AnchorPane layoutX="72.0" layoutY="126.0" prefHeight="267.0" prefWidth="375.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow color="#00000080" height="30.0" offsetY="5.0" radius="14.5" width="30.0" />
+               </effect>
+               <children>
+                  <Label layoutX="79.0" layoutY="82.0" text="Nom: " />
+                  <JFXTextField fx:id="nomCatText" labelFloat="true" layoutX="120.0" layoutY="76.0" prefHeight="26.0" prefWidth="177.0" promptText="Entrer le nom" />
+                  <JFXButton layoutX="120.0" layoutY="150.0" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Ajouter" textFill="WHITE" />
+                  <JFXButton fx:id="catModify" layoutX="122.0" layoutY="191.0" onAction="#handleEditCat" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Modifier" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="614.0" layoutY="40.0" prefHeight="560.0" prefWidth="674.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow color="#868686" height="25.0" offsetX="5.0" offsetY="5.0" radius="12.0" width="25.0" />
+               </effect>
+               <children>
+                  <TableView fx:id="categorieList" prefHeight="560.0" prefWidth="674.0">
+                    <columns>
+                        <TableColumn fx:id="idCatColumn" prefWidth="91.0" text="Id" />
+                        <TableColumn fx:id="nomCatColumn" prefWidth="582.0" text="Nom de la catégorie" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Pagination fx:id="pageCat" layoutX="858.0" layoutY="632.0" prefHeight="72.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="stockPane" layoutX="10.0" layoutY="124.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <AnchorPane layoutX="73.0" layoutY="70.0" prefHeight="460.0" prefWidth="375.0" style="-fx-background-color: white; -fx-birder-width: 5px; -fx-border-color: black;">
+               <effect>
+                  <DropShadow color="#00000080" height="30.0" offsetY="5.0" radius="14.5" width="30.0" />
+               </effect>
+               <children>
+                  <JFXButton fx:id="btnStock" layoutX="121.0" layoutY="342.0" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Ajouter" textFill="WHITE" />
+                  <Label layoutX="50.0" layoutY="74.0" text="Code:" />
+                  <Label layoutX="52.0" layoutY="115.0" text="Nom:" />
+                  <Label fx:id="codeLabel" layoutX="133.0" layoutY="74.0" style="-fx-font-weight: bold;" text=" " />
+                  <Label fx:id="nomLabel" layoutX="133.0" layoutY="115.0" style="-fx-font-weight: bold;" text=" " />
+                  <Label layoutX="54.0" layoutY="211.0" text="Quantite:" />
+                  <Label layoutX="54.0" layoutY="166.0" text="Type" />
+                  <Label layoutX="54.0" layoutY="259.0" text="Date:" />
+                  <JFXDatePicker fx:id="dateStock" layoutX="130.0" layoutY="266.0" promptText="la date" />
+                  <JFXTextField fx:id="qteStockText" layoutX="135.0" layoutY="219.0" promptText="Quantite de l'operation" />
+                  <JFXComboBox fx:id="typeStockCombo" layoutX="135.0" layoutY="171.0" prefHeight="28.0" prefWidth="177.0" promptText="type d'operation" />
+                  <JFXButton layoutX="220.0" layoutY="39.0" onAction="#handleChooseProd" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: black;" text="Choisir produit" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="573.0" layoutY="40.0" prefHeight="560.0" prefWidth="711.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="573.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="100.0">
+               <effect>
+                  <DropShadow color="#868686" height="25.0" offsetX="5.0" offsetY="5.0" radius="12.0" width="25.0" />
+               </effect>
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TableView fx:id="stockList" prefHeight="560.0" prefWidth="718.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="typeStockCol" prefWidth="160.0" text="Type d'operation" />
+                              <TableColumn fx:id="prodStockCol" prefWidth="138.0" text="Produit" />
+                              <TableColumn fx:id="qteStockCol" minWidth="0.0" prefWidth="105.0" text="Quantite" />
+                              <TableColumn fx:id="dateStockCol" prefWidth="155.0" text="Date" />
+                              <TableColumn fx:id="gestStockCol" minWidth="-1.0" prefWidth="152.0" text="Effectuer par:" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <Pagination fx:id="pageStock" layoutX="851.0" layoutY="690.0" prefHeight="72.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="produitPane" layoutX="10.0" layoutY="124.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <AnchorPane layoutX="72.0" layoutY="40.0" prefHeight="654.0" prefWidth="375.0" style="-fx-background-color: white; -fx-birder-width: 5px;">
+               <effect>
+                  <DropShadow color="#00000080" height="30.0" offsetY="5.0" radius="14.5" width="30.0" />
+               </effect>
+               <children>
+                  <Label layoutX="30.0" layoutY="65.0" text="Nom: " />
+                  <JFXTextField fx:id="nomProdText" labelFloat="true" layoutX="145.0" layoutY="47.0" prefHeight="26.0" prefWidth="177.0" promptText="nom produit" />
+                  <JFXButton fx:id="btnProd" layoutX="34.0" layoutY="596.0" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Ajouter" textFill="WHITE" />
+                  <Label layoutX="30.0" layoutY="111.0" text="Description:" />
+                  <JFXTextArea fx:id="descProdText" layoutX="145.0" layoutY="96.0" prefHeight="52.0" prefWidth="177.0" promptText="sa description" />
+                  <Label layoutX="31.0" layoutY="224.0" text="Prix de vente:" />
+                  <JFXTextField fx:id="prixProdText" layoutX="146.0" layoutY="213.0" prefHeight="26.0" prefWidth="177.0" promptText="prix de vente" />
+                  <Label layoutX="34.0" layoutY="301.0" text="Categorie:" />
+                  <JFXComboBox fx:id="catCombo" layoutX="150.0" layoutY="290.0" prefHeight="28.0" prefWidth="177.0" promptText="choisir la categorie" />
+                  <JFXCheckBox fx:id="actifCheck" layoutX="51.0" layoutY="375.0" text="actif" />
+                  <Label layoutX="35.0" layoutY="264.0" text="Quantite:" />
+                  <Label layoutX="150.0" layoutY="258.0" prefHeight="18.0" prefWidth="53.0" text="0" />
+                  <ImageView fx:id="prodPhoto" fitHeight="161.0" fitWidth="163.0" layoutX="107.0" layoutY="406.0" onMouseClicked="#handleImageClick" pickOnBounds="true" preserveRatio="true" style="-fx-border-width: 2px; -fx-border-color: black;">
+                     <image>
+                        <Image url="@../images/icons8_Google_Images_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="35.0" layoutY="344.0" text="code fournisseur:" />
+                  <JFXTextField fx:id="codeFourProdText" layoutX="150.0" layoutY="333.0" prefHeight="26.0" prefWidth="177.0" promptText="entrer le code fournisseur" />
+                  <JFXButton layoutX="202.0" layoutY="598.0" onAction="#handleEditProd" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Modifier" textFill="WHITE" />
+                  <Label layoutX="31.0" layoutY="183.0" text="Prix d'achat:" />
+                  <JFXTextField fx:id="prixAchatProdText" layoutX="146.0" layoutY="172.0" prefHeight="26.0" prefWidth="177.0" promptText="prix d'achat" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="502.0" layoutY="100.0" prefHeight="588.0" prefWidth="785.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="502.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="100.0">
+               <effect>
+                  <DropShadow color="#85858591" height="25.0" offsetX="5.0" offsetY="5.0" radius="12.0" width="25.0" />
+               </effect>
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TableView fx:id="prodList" prefHeight="597.0" prefWidth="731.0" stylesheets="@css.css" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="photoProd" prefWidth="85.0" text="Photo" />
+                              <TableColumn fx:id="codeProdColumn" prefWidth="103.0" text="Code" />
+                              <TableColumn fx:id="nomProdColumn" prefWidth="110.0" text="Nom" />
+                              <TableColumn fx:id="prixAchatProdColumn" prefWidth="103.0" text="Prix Achat" />
+                              <TableColumn fx:id="prixProdColumn" prefWidth="108.0" text="Prix Vente" />
+                              <TableColumn fx:id="qteProdColumn" prefWidth="74.0" text="Quantite" />
+                              <TableColumn fx:id="fourProdColumn" prefWidth="98.0" text="Fournisseur" />
+                              <TableColumn fx:id="catProdColumn" prefWidth="124.0" text="Categorie" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="searchText" layoutX="679.0" layoutY="40.0" onKeyReleased="#handleSearch" prefHeight="31.0" prefWidth="28.0" promptText="000" />
+            <JFXTextField fx:id="searchText1" layoutX="718.0" layoutY="40.0" onKeyReleased="#handleSearch" prefHeight="31.0" prefWidth="28.0" promptText="000" />
+            <Label layoutX="556.0" layoutY="45.0" prefHeight="21.0" prefWidth="108.0" text="Rechercher:" />
+            <JFXButton fx:id="btnRecherAvanc" layoutX="1110.0" layoutY="38.0" onAction="#handleSearchAv" prefHeight="35.0" prefWidth="177.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Recherche avancée" textFill="WHITE" />
+            <Label layoutX="709.0" layoutY="45.0" text="-" />
+            <Pagination fx:id="pageProd" layoutX="1010.0" layoutY="694.0" prefHeight="72.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="usersPane" layoutX="12.0" layoutY="126.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <AnchorPane layoutX="78.0" layoutY="86.0" prefHeight="460.0" prefWidth="437.0" style="-fx-background-color: white; -fx-birder-width: 5px;">
+               <effect>
+                  <DropShadow color="#00000080" height="30.0" offsetY="5.0" radius="14.5" width="30.0" />
+               </effect>
+               <children>
+                  <Label layoutX="46.0" layoutY="60.0" text="Nom: " />
+                  <JFXTextField fx:id="nomUserText" labelFloat="true" layoutX="145.0" layoutY="47.0" prefHeight="26.0" prefWidth="177.0" promptText="Nom utilisateur" />
+                  <JFXButton fx:id="btnUser" layoutX="151.0" layoutY="367.0" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Ajouter" textFill="WHITE" />
+                  <Label layoutX="49.0" layoutY="125.0" text="Type:" />
+                  <JFXComboBox fx:id="typeUserCombo" labelFloat="true" layoutX="149.0" layoutY="119.0" prefHeight="28.0" prefWidth="177.0" promptText="choisir le type" />
+                  <JFXButton layoutX="161.0" layoutY="405.0" onAction="#handleEditGest" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Modifier" textFill="WHITE" />
+                  <Pane layoutX="25.0" layoutY="203.0" prefHeight="124.0" prefWidth="388.0" style="-fx-border-width: 2px; -fx-border-color: black;">
+                     <children>
+                        <Label layoutX="57.0" layoutY="34.0" text="username:" />
+                        <JFXTextField fx:id="userText" layoutX="177.0" layoutY="30.0" prefHeight="26.0" prefWidth="177.0" />
+                        <Label layoutX="59.0" layoutY="79.0" text="password" />
+                        <JFXPasswordField fx:id="passUserText" layoutX="177.0" layoutY="73.0" prefHeight="31.0" prefWidth="177.0" />
+                        <Label layoutX="24.0" layoutY="-10.0" style="-fx-background-color: white; -fx-font-weight: bold;" text="Informations de connexion" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="614.0" layoutY="40.0" prefHeight="560.0" prefWidth="674.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow color="#85858591" height="25.0" offsetX="5.0" offsetY="5.0" radius="12.0" width="25.0" />
+               </effect>
+               <children>
+                  <TableView fx:id="usersList" prefHeight="560.0" prefWidth="674.0">
+                     <columns>
+                        <TableColumn fx:id="nomGestColumn" prefWidth="154.0" text="Nom" />
+                        <TableColumn fx:id="typeGestColumn" prefWidth="154.0" text="type" />
+                        <TableColumn fx:id="userGestColumn" minWidth="0.0" prefWidth="159.0" text="username" />
+                        <TableColumn fx:id="passGestColumn" prefWidth="153.0" text="password" />
+                        <TableColumn fx:id="stateUserColumn" prefWidth="61.0" text="Etat" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Pagination fx:id="pageGest" layoutX="851.0" layoutY="624.0" prefHeight="90.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cmdPane" layoutX="202.0" layoutY="252.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <TableView fx:id="factureList" layoutX="43.0" layoutY="50.0" prefHeight="663.0" prefWidth="1264.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+              <columns>
+                <TableColumn fx:id="dateFacCol" prefWidth="140.0" text="Date facture" />
+                  <TableColumn fx:id="dtEnregCol" prefWidth="177.0" text="Date Enregistrement" />
+                  <TableColumn fx:id="montantCol" prefWidth="172.0" text="Montant" />
+                <TableColumn fx:id="remiseCol" minWidth="0.0" prefWidth="93.0" text="Remise" />
+                  <TableColumn fx:id="montantFinalCol" prefWidth="174.0" text="montant final" />
+                  <TableColumn fx:id="typeFacCol" prefWidth="211.0" text="type" />
+                  <TableColumn fx:id="gestFacCol" prefWidth="371.0" text="Effectuer par:" />
+              </columns>
+            </TableView>
+            <Label layoutX="779.0" layoutY="14.0" text="Factures contenant:" />
+            <Label fx:id="codeLabelStock" layoutX="933.0" layoutY="14.0" onMouseClicked="#handleCodeProd" text="code produit">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="14.0" text="Factures:" />
+            <JFXRadioButton fx:id="jourRadio" layoutX="159.0" layoutY="14.0" onAction="#handleRadioSelect" text="du jour">
+               <toggleGroup>
+                  <ToggleGroup fx:id="factgroup" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="moisRadio" layoutX="248.0" layoutY="14.0" onAction="#handleRadioSelect" text="du mois" toggleGroup="$factgroup" />
+            <JFXRadioButton fx:id="anRadio" layoutX="343.0" layoutY="14.0" onAction="#handleRadioSelect" text="de l'an" toggleGroup="$factgroup" />
+            <ImageView fx:id="passCmd" fitHeight="52.0" fitWidth="53.0" layoutX="43.0" layoutY="722.0" onMouseClicked="#handleFactureCmd" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0">
+               <image>
+                  <Image url="@../images/icon_plus_facture_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="viewFactureBtn" fitHeight="52.0" fitWidth="53.0" layoutX="113.0" layoutY="722.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0">
+               <image>
+                  <Image url="@../images/icon_print_facture.png" />
+               </image>
+            </ImageView>
+            <Pagination fx:id="pageFact" layoutX="570.0" layoutY="622.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="compPane" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <JFXButton fx:id="benBtn" buttonType="RAISED" layoutX="38.0" layoutY="78.0" onAction="#handleCompClick" prefHeight="46.0" prefWidth="245.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Bénéfices" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="mouvBtn" buttonType="RAISED" layoutX="38.0" layoutY="192.0" onAction="#handleCompClick" prefHeight="46.0" prefWidth="245.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Etat des mouvements" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="recapBtn" buttonType="RAISED" layoutX="38.0" layoutY="251.0" onAction="#handleCompClick" prefHeight="46.0" prefWidth="245.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Etat recapitulatif des articles" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="compteGestBtn" buttonType="RAISED" layoutX="38.0" layoutY="137.0" onAction="#handleCompClick" prefHeight="46.0" prefWidth="245.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Compte de gestion" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutX="329.0" layoutY="148.0" prefHeight="548.0" prefWidth="978.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
+               <effect>
+                  <DropShadow color="#868686" height="25.0" offsetX="5.0" offsetY="5.0" radius="12.0" width="25.0" />
+               </effect>
+               <children>
+                  <TableView fx:id="comptaList" prefHeight="548.0" prefWidth="929.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="categCompCol" prefWidth="153.0" text="Categorie" />
+                        <TableColumn fx:id="articleCol" prefWidth="142.0" style="-fx-width: 100%;" text="Article" />
+                        <TableColumn fx:id="prixUCol" minWidth="0.0" prefWidth="151.0" text="Prix Unitaire" />
+                        <TableColumn fx:id="benCol" prefWidth="202.0" text="Benefice Unitaire" />
+                        <TableColumn fx:id="qteCol" minWidth="0.0" prefWidth="117.0" text="Quantite" />
+                        <TableColumn fx:id="benTotalCol" minWidth="0.0" prefWidth="228.0" text="Benefice Total" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="mouvementsList" prefHeight="558.0" prefWidth="939.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TableView fx:id="recapList" prefHeight="558.0" prefWidth="939.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TableView fx:id="compteGestList" layoutX="-56.0" prefHeight="548.0" prefWidth="983.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="381.0" layoutY="91.0" text="Date de debut:" />
+            <Label layoutX="863.0" layoutY="91.0" text="Date de fin:" />
+            <JFXDatePicker fx:id="dateMin" layoutX="511.0" layoutY="86.0" />
+            <JFXDatePicker fx:id="dateMax" layoutX="962.0" layoutY="86.0" />
+            <Pagination fx:id="pageMouv" layoutX="760.0" layoutY="700.0" prefHeight="58.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" />
+            <Pagination fx:id="pageBen" layoutX="760.0" layoutY="700.0" prefHeight="58.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" />
+            <Pagination fx:id="pageRecap" layoutX="760.0" layoutY="700.0" prefHeight="58.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" />
+            <Pagination fx:id="pageCompteGest" layoutX="760.0" layoutY="700.0" prefHeight="58.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <ImageView fitHeight="417.0" fitWidth="888.0" layoutX="220.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

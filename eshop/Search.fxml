@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="322.0" prefWidth="424.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eshop.SearchController">
+   <children>
+      <Label layoutX="78.0" layoutY="41.0" prefHeight="21.0" prefWidth="87.0" text="Categorie:" />
+      <JFXComboBox fx:id="catCombo" layoutX="212.0" layoutY="36.0" prefHeight="31.0" prefWidth="159.0" />
+      <Label layoutX="78.0" layoutY="104.0" text="Prix" />
+      <JFXTextField fx:id="prixText" layoutX="222.0" layoutY="99.0" prefHeight="31.0" prefWidth="140.0" />
+      <Label layoutX="48.0" layoutY="160.0" text="Quantite:" />
+      <JFXTextField fx:id="qteText" layoutX="222.0" layoutY="155.0" prefHeight="31.0" prefWidth="140.0" />
+      <JFXButton fx:id="btnSearch" layoutX="138.0" layoutY="258.0" onAction="#handleSearch" prefHeight="31.0" prefWidth="177.0" ripplerFill="WHITE" style="-fx-background-color: black;" text="Lancer la recherche" textFill="WHITE" />
+      <JFXComboBox fx:id="sigCombo" layoutX="131.0" layoutY="99.0" prefHeight="31.0" prefWidth="71.0" />
+      <JFXComboBox fx:id="sigCombo2" layoutX="128.0" layoutY="155.0" prefHeight="31.0" prefWidth="71.0" />
+   </children>
+</AnchorPane>

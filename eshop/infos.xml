@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+    <bd>
+        <db>shopdb</db>
+        <port>3306</port>
+        <user>root</user>
+        <pass/>
+        <url>127.0.0.1</url>
+    </bd>
+    <admin>
+        <user>root</user>
+        <pass>toor</pass>
+    </admin>
+    <server>
+        <url>127.0.0.1/eshop</url>
+    </server>
+</config>
